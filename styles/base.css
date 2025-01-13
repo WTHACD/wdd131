@@ -97,8 +97,8 @@ hr {
 .profile-image {
     float: right;
     display: flex;
-  justify-content: center; /* Centra la imagen horizontalmente */
-  align-items: center; /* Centra la imagen verticalmente */
+  justify-content: center; 
+  align-items: center; 
   width: 120px;
   height: 130px;
 }
