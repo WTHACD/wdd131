@@ -44,7 +44,7 @@ h1 {
 }
 
 #mainmenu::before {
-    content: "=";
+    content: "≡";
     color: #fff;
 }
 #mainmenu.show::before {
