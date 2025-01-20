@@ -12,7 +12,11 @@
 }
 
 :root {
-   
+    --BL: rgb(23, 17, 35);
+    --morado: rgb(49, 17, 73);
+    --Cool: rgb(65, 71, 112);
+    --Bluetiza: rgb(160, 185, 207);
+    --Nieve: rgb(226, 207, 234);
 }
 
 header {
