@@ -1,0 +1,106 @@
+.exo-2-unique { 
+    font-family: 'Exo 2', serif; 
+    font-optical-sizing: auto; 
+    font-weight: 400; 
+    font-style: normal; 
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --BL: rgb(23, 17, 35);
+    --morado: rgb(49, 17, 73);
+    --Delft-Blue: rgb(65, 71, 112);
+    --Powder-Blue: rgb(160, 185, 207);
+    --Nieve: rgb(226, 207, 234);
+}
+
+header {
+    background-color: var(--morado);
+}
+
+h1 {
+    color: #fff;
+    font-family: 'Caveat', 'Exo 2', serif;
+    font-size: 2.87rem;
+    padding: 15px;
+}
+
+#mainmenu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: .5rem .75rem;
+    background-color: var(--BL);
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+}
+
+#mainmenu::before {
+    content: "=";
+    color: #fff;
+}
+#mainmenu.show::before {
+    content: "X";
+}
+
+nav {
+    background-color: var(--morado);
+    font-family: 'Exo 2', serif;
+}
+
+.navi {
+    list-style: none;
+}
+.navi li {
+    display: none;
+}
+
+.navi a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1.5rem, 2vmin, 1.5rem); 
+    font-family: 'Exo 2', serif;
+}
+
+.navi a:hover, .navi a:active {
+    color: var(--Nieve);
+    background-color: black;
+}
+
+.show li {
+    display: block;
+}
+
+h2 {
+    font-family: 'Caveat', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+}
+
+img {
+    border-radius: 10px;
+    height: 100%;
+    width: auto;
+}
+
+footer {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    background: var(--morado);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+}
