@@ -1,0 +1,68 @@
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="description" content="WDD131 W03 assignment">
+        <meta name="author" content="WACD">
+        <title>Costa Rica PAGE - W03</title>
+        
+       
+        <link rel="stylesheet" href="styles/place.css">       
+        <script src="scripts/place.js" defer></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Anton&family=Open+Sans:ital,wght@0,300..800;1,300..800&family=Oswald:wght@200..700&family=Roboto:wght@100;400&display=swap" rel="stylesheet">
+    </head>
+ <body>
+    <div class="container">
+    <header>
+    <h1>COSTA RICA</h1>
+    </header>           
+            
+    <main>
+        <div class="hero">
+            <picture>
+                <source srcset="images/hero_large1.webp" media="(min-width: 1000px)">
+                <img src="images/rana_samall.webp" alt="A frog in Costa Rica" class="responsive-image">
+            </picture>            
+        </div>
+    
+      
+            <section>
+
+            <div class="izq">
+                <h2>Data</h2>
+                <p>Area: 51,100 km²</p>
+                <p>Population: 5,094,118 (aprox.)</p>
+                <p>Capital: San José</p>
+                <p>Languages: Spanish</p>
+                <p>Currency: Costa Rican Colón (CRC)</p>
+                <p>Time Zone: UTC-6</p>
+                <p>Calling Code: +506</p>
+                <p>Internet TLD: .cr</p>
+            </div>
+            </section>
+    
+            <section>
+                <div class="der">
+                 <h2>Weather</h2>
+                 <img src="images/suny.svg" alt="icon">
+                 <p>Temperature: 26 °C</p>
+                 <p>Conditions: Mostly Sunny</p>
+                 <p>Wind: 12 km/h</p>
+                 <p>Wind Chill: <span id="windchill-value">N/A</span></p>
+                </div>
+            </section>
+       
+    </main>
+
+
+<footer>
+    <p>| &copy; <span id="currentyear"></span> | Wilberth Alejandro Camacho Doblado | San José, Costa Rica</p>
+    <p><span id="lastModified"></span></p>
+</footer>
+</div>
+</body>
+</html>
