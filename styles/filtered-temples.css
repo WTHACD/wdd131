@@ -1,0 +1,260 @@
+/* ================================
+   Variables y Reset Global
+================================ */
+:root {
+    --BL: rgb(23, 17, 35);
+    --morado: rgb(49, 17, 73);
+    --Cool: rgb(65, 71, 112);
+    --Bluetiza: rgb(160, 185, 207);
+    --Nieve: rgb(226, 207, 234);
+    --spacing: 10px;
+    --bord: 1px solid #777;
+    --blur: 10px;
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  /* ================================
+     Tipografía Base
+  ================================ */
+  .exo-2-unique { 
+    font-family: 'Exo 2', serif; 
+    font-optical-sizing: auto; 
+    font-weight: 400; 
+    font-style: normal; 
+  }
+  
+  /* ================================
+     Layout Global
+  ================================ */
+  body {
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+  }
+  
+  /* ================================
+     Header y Navegación
+  ================================ */
+  header {
+    background-color: var(--morado);
+    /* Por defecto, centrado en móviles */
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #fff;
+    font-family: 'Caveat', 'Exo 2', serif;
+    font-size: 2.87rem;
+    padding: 15px;
+  }
+  
+  /* Botón de menú (visible en móviles) */
+  #mainmenu {
+    display: block;
+    font-size: 2rem;
+    font-weight: 700;
+    text-decoration: none;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--BL);
+    color: #000;
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+  }
+  
+  #mainmenu::before {
+    content: "≡";
+    color: #fff;
+  }
+  
+  #mainmenu.show::before {
+    content: "X";
+  }
+  
+  /* Navegación: en móviles se oculta el <nav> completo */
+  nav {
+    background-color: var(--morado);
+    font-family: 'Exo 2', serif;
+    /* Para móviles: oculto por defecto */
+    display: none;
+  }
+  
+  nav.show {
+    display: block;
+  }
+  
+  /* La lista de navegación */
+  .navi {
+    list-style: none;
+  }
+  
+  .navi li {
+    /* En móviles, se muestran en bloque al activar el menú */
+    display: block;
+  }
+  
+  .navi a {
+    display: block;
+    padding: 0.75rem 1rem;
+    text-align: center;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+    transition: 0.5s;
+    font-size: clamp(1.5rem, 2vmin, 1.5rem);
+    font-family: 'Exo 2', serif;
+  }
+  
+  .navi a:hover,
+  .navi a:active {
+    color: var(--Nieve);
+    background-color: black;
+  }
+  
+  /* ================================
+     Main y Contenido
+  ================================ */
+  main {
+    display: grid;
+    gap: 1rem;
+    padding: 20px;
+  }
+  
+  /* Contenedor de Temple Cards */
+  #templeContainer {
+    display: grid;
+    /* Por defecto: 3 columnas */
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    place-items: center;
+  }
+  
+  /* ================================
+     Imágenes y Otros Elementos
+  ================================ */
+  img {
+    border-radius: 10px;
+    width: 100%;
+    height: auto;
+  }
+  
+  h2 {
+    font-family: 'Caveat', 'Arial Narrow', Arial, sans-serif;
+    font-size: 36px;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  /* ================================
+     Footer
+  ================================ */
+  footer {
+    background: var(--morado);
+    padding: 2rem;
+    text-align: center;
+    color: #fff;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  }
+  
+  /* ================================
+     Media Queries Responsivas
+  ================================ */
+  
+  /* --- Móviles y pantallas pequeñas (hasta 50em / 800px) --- */
+  @media only screen and (max-width: 50em) {
+    /* El botón de menú se mantiene visible en móviles */
+    #mainmenu {
+      display: block;
+    }
+    /* En móviles, el <nav> se oculta por defecto y se muestra solo al activar la clase "show" vía JS */
+    nav {
+      display: none;
+    }
+    nav.show {
+      display: block;
+    }
+    
+    /* Ajuste del header para centrar el contenido */
+    header {
+      display: grid;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    /* Distribución de la cuadrícula de Temple Cards: 
+       Entre 361px y 768px: 2 columnas */
+    @media only screen and (min-width: 361px) and (max-width: 768px) {
+      #templeContainer {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+    
+    /* En resoluciones muy pequeñas (360px o menos, como un iPhone 12 mini): 1 columna */
+    @media only screen and (max-width: 360px) {
+      #templeContainer {
+        grid-template-columns: 1fr;
+      }
+    }
+    
+    /* Ajustes tipográficos para móviles */
+    h1 {
+      font-size: 2rem;
+      padding: 1rem;
+    }
+    
+    main {
+      padding: 10px;
+    }
+  }
+  
+  /* --- Pantallas Medianas y Grandes (a partir de 50em ~800px) --- */
+  @media only screen and (min-width: 50em) {
+    /* Layout del header en pantallas grandes */
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+    }
+    
+    h1 {
+      font-size: 46px;
+    }
+    
+    /* Oculta el botón de menú en pantallas grandes */
+    #mainmenu {
+      display: none;
+    }
+    
+    /* Muestra la navegación de forma horizontal */
+    nav {
+      display: block;
+    }
+    
+    .navi {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+    }
+    
+    .navi a {
+      font-size: 26px;
+    }
+    
+    /* Mantener la cuadrícula de 3 columnas */
+    #templeContainer {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+  
