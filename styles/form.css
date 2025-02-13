@@ -1,0 +1,110 @@
+:root {
+    --BL: rgb(23, 17, 35);
+    --morado: rgb(49, 17, 73);
+    --Cool: rgb(65, 71, 112);
+    --Bluetiza: rgb(47, 50, 92);
+    --Nieve: rgb(226, 207, 234);
+}
+    /* Global Styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+      color: #333;
+    }
+    header, footer {
+        background-color: var(--morado);
+      color: #fff;
+      text-align: center;
+      padding: 1rem;
+    }
+    .container {
+      max-width: 800px;
+      margin: 2rem auto;
+      background-color: #fff;
+      padding: 2rem;
+      box-shadow: 0 0 10px var(--Bluetiza)
+    }
+    form {
+      display: grid;
+      grid-gap: 1rem;
+      unicode-bidi: bidi-override;
+    }
+    label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+    input[type="text"],
+    input[type="date"],
+    select,
+    textarea {
+      width: 100%;
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    /* Rating group styling */
+    .rating {
+        display: flex;
+        gap: 0.5rem;           
+        flex-direction: row-reverse;
+        justify-content: center;
+      }
+      
+      .rating input {
+        display: none; 
+      }
+      
+      .rating label {
+        font-size: 2rem;
+        color: #ccc; 
+        cursor: pointer;
+        transition: color 0.2s;
+      }     
+      
+      .rating label:hover,
+      .rating label:hover ~ label {
+        color: gold;
+      }     
+      
+      .rating input:checked ~ label {
+        color: gold;
+      }
+      
+      
+    /* Useful Features */
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 1rem;
+    }
+    legend {
+      font-weight: bold;
+    }
+    .features-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+    .features-group div {
+      display: flex;
+      align-items: center;
+    }
+    .features-group label {
+      font-weight: normal;
+      margin-left: 0.25rem;
+    }
+    /* Submit Button */
+    .submit-btn {
+      padding: 0.75rem;
+      background-color: var(--Cool);
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: var(--Bluetiza);
+    }
+ 
