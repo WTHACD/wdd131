@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>CopyTrade Hub</title>
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
+ <style>
+ /* CSS Variables for Color Scheme */
+ :root {
+ --primary-color: #1E3A8A; /* Dark Blue */
+ --secondary-color: #FACC15; /* Golden Yellow */
+ --background-color: #F4F4F4; /* Light Gray */
+ --text-color: #333333; /* Dark Gray */
+ }
+
+
+ /* Basic Reset */
+ body, html {
+ margin: 0;
+ padding: 0;
+ font-family: 'Open Sans', sans-serif;
+ background-color: var(--background-color);
+ color: var(--text-color);
+ }
+
+
+ /* General Styling */
+ .container {
+ width: 90%;
+ max-width: 1200px;
+ margin: 0 auto;
+ padding: 20px;
+ }
+
+
+ h1, h2, h3 {
+ font-family: 'Poppins', sans-serif;
+ color: var(--primary-color);
+ }
+
+
+ /* Header */
+ header {
+ background-color: var(--primary-color);
+ color: white;
+ padding: 10px 0;
+ }
+
+
+ header .container {
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ }
+
+
+ nav ul {
+ list-style: none;
+ padding: 0;
+ margin: 0;
+ display: flex;
+ }
+
+
+ nav ul li {
+ margin-left: 20px;
+ }
+
+
+ nav a {
+ color: white;
+ text-decoration: none;
+ }
+
+
+ /* Hero Section */
+ .hero {
+ padding: 50px 0;
+ text-align: center;
+ }
+
+
+ .hero h1 {
+ font-size: 2.5em;
+ }
+
+
+ .hero p {
+ font-size: 1.2em;
+ line-height: 1.6;
+ }
+
+
+ .cta-button {
+ display: inline-block;
+ background-color: var(--secondary-color);
+ color: var(--primary-color);
+ padding: 10px 20px;
+ text-decoration: none;
+ border-radius: 5px;
+ font-weight: bold;
+ margin-top: 20px;
+ }
+
+
+ /* Features Section */
+ .features {
+ display: flex;
+ flex-wrap: wrap;
+ justify-content: space-around;
+ padding: 30px 0;
+ }
+
+
+ .feature {
+ width: 30%;
+ min-width: 300px;
+ margin-bottom: 20px;
+ padding: 20px;
+ background-color: white;
+ border-radius: 5px;
+ box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+ }
+
+
+ .feature h3 {
+ margin-bottom: 10px;
+ }
+
+
+ /* Footer */
+ footer {
+ background-color: var(--primary-color);
+ color: white;
+ text-align: center;
+ padding: 20px 0;
+ }
+
+
+ /* Code Snippets Styling */
+ .code-snippet {
+ font-family: 'Roboto Mono', monospace;
+ background-color: #e8e8e8;
+ padding: 10px;
+ border-radius: 5px;
+ overflow-x: auto;
+ }
+
+
+ /* Responsive Design */
+ @media (max-width: 768px) {
+ header .container {
+ flex-direction: column;
+ align-items: flex-start;
+ }
+
+
+ nav ul {
+ margin-top: 10px;
+ flex-direction: column;
+ }
+
+
+ nav ul li {
+ margin-left: 0;
+ margin-bottom: 10px;
+ }
+
+
+ .features {
+ flex-direction: column;
+ align-items: center;
+ }
+
+
+ .feature {
+ width: 80%;
+ }
+ }
+ </style>
+</head>
+<body>
+ <header>
+ <div class="container">
+ <div class="logo">CopyTrade Hub</div>
+ <nav>
+ <ul>
+ <li><a href="#">Guides</a></li>
+ <li><a href="#">Strategies</a></li>
+ <li><a href="#">Market Insights</a></li>
+ <li><a href="#">Review</a></li>
+ </ul>
+ </nav>
+ </div>
+ </header>
+
+
+ <section class="hero">
+ <div class="container">
+ <h1>Welcome to CopyTrade Hub</h1>
+ <p>Your central resource for mastering copy trading on cTrader.</p>
+ <a href="#" class="cta-button">Get Started</a>
+ </div>
+ </section>
+
+
+ <section class="features">
+ <div class="container">
+ <div class="feature">
+ <h3>Step-by-Step Guides</h3>
+ <p>Learn how to start copy trading on cTrader with our comprehensive guides.</p>
+ </div>
+ <div class="feature">
+ <h3>Market Analysis</h3>
+ <p>Stay informed with the latest market trends and insights to optimize your trading.</p>
+ </div>
+ <div class="feature">
+ <h3>Risk Management</h3>
+ <p>Discover best practices for minimizing risk while maximizing your copy trading potential.</p>
+ </div>
+ </div>
+ </section>
+
+
+ <footer>
+ <div class="container">
+ <p>&copy; 2024 CopyTrade Hub. All rights reserved.</p>
+ </div>
+ </footer>
+</body>
+</html>

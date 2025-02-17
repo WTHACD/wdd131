@@ -1,32 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Product Review Form</title>
-  <meta name ="description" content="Product Review Form, W05 Assignment">
-    <meta name ="author" content="WACD">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Exo+2:ital@1&display=swap" rel="stylesheet">
-    <link href="styles/form.css" rel="stylesheet">   
-    <script src="scripts/form.js" defer></script>    
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Community - CopyTrade Hub</title>
+ <meta name="description" content="Connect with other traders, share strategies, and discuss market trends in our community forum.">
+ <link rel="icon" href="favicon.ico" type="image/x-icon">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+ <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+ <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
+ <link rel="stylesheet" href="styles/form.css">
 </head>
 <body>
   <header>
-    <h1>Product Review</h1>
-  </header>
-  <div class="container">
-    <form method="get" action="rev.html">
-      <!-- Product Name -->
-      <div>
-        <label for="productName">Product Name</label>
-        <select id="productName" name="productName" required>
-          <option value="" disabled selected>Select a Product ...</option>
-          <!-- Options will be populated dynamically via JavaScript -->
-        </select>
+    
+    <div class="container">
+      <a href="index.html" class="logo">CopyTrade Hub</a>
+      <nav>
+      <ul class="menu">
+      <li><a href="guides.html">Guides</a></li>
+      <li><a href="strategies.html">Strategies</a></li>
+      <li><a href="markets_insights.html">Market Insights</a></li>
+      <li><a href="review.html">Review</a></li>
+      </ul>
+      <button class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+      </button>
+      </nav>
       </div>
-      <!-- Overall Rating -->
+  </header>
+  
+  <main>
+   <section class="community-content">
+    <div class="community-container"> <!-- Renamed class here -->
+    <h2> Review</h2>
+        <div class="container">
+    <form method="get" action="rev.html">
+            <!-- Overall Rating -->
       <label>Overall Rating</label>
       <div class="rating">       
         
@@ -50,7 +62,7 @@
 
       <!-- Date of Installation -->
       <div>
-        <label for="installDate">Date of Installation</label>
+        <label for="installDate">Date of Review</label>
         <input type="date" id="installDate" name="installDate" required>
       </div>
 
@@ -96,10 +108,15 @@
         <input type="submit" value="Submit Review" class="submit-btn">
       </div>
     </form>
+    
   </div>
+  </section>
+  </main>
+
   <footer>
-    <p>| &copy; <span id="currentyear"></span> | Wilberth Alejandro Camacho Doblado | San José, Costa Rica</p>
-    <p><span id="lastModified"></span></p>
-</footer>  
+   
+    <p>&copy; 2024 CopyTrade Hub. All rights reserved.</p>
+   
+    </footer>  
 </body>
 </html>

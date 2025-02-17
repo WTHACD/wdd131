@@ -1,0 +1,68 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Copy Trading Strategies - CopyTrade Hub</title>
+  <meta name="description" content="Explore various copy trading strategies with the cTrader widget and find the best fit for your trading style.">
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&family=Poppins:wght@600&family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles/proyect.css">
+ 
+
+ </head>
+ <body>
+  <header>
+  <div class="container">
+  <a href="index.html" class="logo">CopyTrade Hub</a>
+  <nav>
+  <ul class="menu">
+  <li><a href="guides.html">Guides</a></li>
+  <li><a href="strategies.html">Strategies</a></li>
+  <li><a href="markets_insights.html">Market Insights</a></li>
+  <li><a href="review.html">Review</a></li>
+  </ul>
+  <button class="menu-toggle">
+  <span></span>
+  <span></span>
+  <span></span>
+  </button>
+  </nav>
+  </div>
+  </header>
+ 
+
+  <main>
+  <section class="strategies-content">
+  <div class="container">
+  <h2>cTrader Copy Trading Strategies</h2>
+  <p>Explore various copy trading strategies and find the best fit for your trading style with the cTrader widget below:</p>
+  <div id="ctrader-plugin-container">
+  <div id="ctrader-plugin-root"></div>
+  </div>
+  </div>
+  </section>
+  </main>
+ 
+
+  <footer>
+  <div class="container">
+  <p>&copy; 2024 CopyTrade Hub. All rights reserved.</p>
+  </div>
+  </footer>
+
+  <div id="ctrader-plugin-root" style="width: 100%; height: 100%; position: relative"></div>
+  <script id="init" type="text/javascript" defer src="https://ct.spotware.com/widget.js"></script>
+  <script type="text/javascript">
+   const script = document.getElementById('init');
+  
+   script.onload = () => {
+   putInitScript('runPlugin');
+   runPlugin('ctrader-plugin-root', {"route":"/esp/93296/?lang=en&theme=dark","appConfig":{"strategy":{"showStrategyPromotion":true}}});
+   };
+  </script>
+  
+ </body>
+ </html>

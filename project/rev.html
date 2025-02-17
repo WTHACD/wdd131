@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Review Confirmation</title>
+  <meta name ="description" content="Review page, W05 Assignment">
+  <meta name ="author" content="WACD">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Averia+Gruesa+Libre&family=Exo+2:ital@1&display=swap" rel="stylesheet">
+
+  <link href="styles/review.css" rel="stylesheet">  
+  <script src="scripts/review.js" defer></script>    
+  
+</head>
+<body>
+  <header>
+    <h1>Review Confirmation</h1>
+  </header>
+  <div class="container">
+    <!-- Review Count Display -->
+    <div id="reviewCountDisplay"></div>
+    <h2>Thank you for your review!</h2>
+    <div class="review-data">
+      <p><strong>Product:</strong> <span id="displayProduct"></span></p>
+      <p><strong>Overall Rating:</strong> <span id="displayRating"></span> star(s)</p>
+      <p><strong>Date of Installation:</strong> <span id="displayDate"></span></p>
+      <p><strong>Useful Features:</strong> <span id="displayFeatures"></span></p>
+      <p><strong>Written Review:</strong> <span id="displayReview"></span></p>
+      <p><strong>User Name:</strong> <span id="displayUserName"></span></p>
+    </div>
+    <a href="form.html" class="back-link">Submit Another Review</a>
+  </div>
+  <footer>
+    <p>| &copy; <span id="currentyear"></span> | Wilberth Alejandro Camacho Doblado | San José, Costa Rica</p>
+    <p><span id="lastModified"></span></p>
+</footer> 
+</body>
+</html>
